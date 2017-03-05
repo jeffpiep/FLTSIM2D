@@ -1,7 +1,24 @@
+'-----------------------------------------------------------
+'
+'					FLTSIM2D
+'
+'Longitudinal (2-D: Z & X) flight simulator 
+'for Atari 800XL 2017 8-bit BASIC 10-Liner
+'
+'Jeff Piepmeier
+'march 4, 2017
+'http://jeffpiepmeier.blogspot.com/
+'http://github.com/jeffpiep/
+'
+'Parsed with TurboBASIC XL Parser Tool 
+'http://github.com/dmsc/tbxl-parser
+$options +optimize, optimize=-convert_percent-const_replace
+'Tested on Altirra
+'-----------------------------------------------------------
 
-
+'SET UP CONSTANTS AND INITIAL CONDITIONS
 PI = 3.14159265DT = 0.1 : REM (S) TIME STEPVX = 60 : REM (M/S) INITIAL SPEEDVZ = 0 : REM (M/S)X = 0 : REM (M) INITIAL POSITIONZ = 1000 : REM (M)OMEGA = 0 : REM (RAD/S) INITIAL PITCH RATEPITCH = 0.087 : REM (RAD) INITIAL PITCHMASS = 1100 : REM (KG)G = 9.81 : REM (M/S^2) ACCEL OF GRAVITY
-WEIGHT = MASS*G : REM (N)IYY = 1825 : REM (KG-M^2) MOMENT OF INERTIARHO = 1.225 : REM (KG/M^2) STP AIR DENSITYSW = 16.2 : REM (M^2) WIND AREASE = 3.3 : REM (M^2) TAILPLANE AREACM = -0.02 : REM WING MOMENT COEFFICIENTCHORD = 1.75 : REM (M) WIND CHORD LENGTHTHRUST = 2000 : REM (N) STATIC THRUSTARM = 6 : REM (M) TAILPLANE MOMENT ARMELANG = -0.5 : REM (DEG) ELEVATOR SETTING
+WEIGHT = MASS*G : REM (N)IYY = 1825 : REM (KG-M^2) MOMENT OF INERTIARHO = 1.225 : REM (KG/M^2) STP AIR DENSITYSW = 16.2 : REM (M^2) WIND AREASE = 3.3 : REM (M^2) TAILPLANE AREACM = -0.02 : REM WING MOMENT COEFFICIENTCHORD = 1.75 : REM (M) WIND CHORD LENGTHTHRUST = 1500 : REM (N) STATIC THRUSTARM = 6 : REM (M) TAILPLANE MOMENT ARMELANG = -0.5 : REM (DEG) ELEVATOR SETTING
 CLS 
 DO
 
@@ -22,6 +39,6 @@ FX = TX+LX+DX+ELX+EDX : REM SUM FORCESFZ = TZ+LZ+DZ+ELZ+EDZ-WEIGHTMM = MW+MEL+
 
 'DUMP "P:"
 'TIME STEP EQUATIONS OF MOTION: NEWTON'S FIRST & SECOND LAWS
-VX = FX/WEIGHT/G*DT+VXVZ = FZ/WEIGHT/G*DT+VZOMEGA = MM/IYY*DT+OMEGA
+VX = FX/MASS*DT+VX VZ = FZ/MASS*DT+VZOMEGA = MM/IYY*DT+OMEGA
 X = VX*DT+XZ = VZ*DT+ZPITCH = PITCH-OMEGA*DT
 LOOP 
