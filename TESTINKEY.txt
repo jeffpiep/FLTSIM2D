@@ -1,0 +1,7 @@
+DIM A$(1)
+DO
+
+A$=INKEY$
+IF A$="\1E" : ? "ARROW!" : ENDIF
+
+LOOP
