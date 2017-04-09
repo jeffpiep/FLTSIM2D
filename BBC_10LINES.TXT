@@ -1,0 +1,10 @@
+0A=.1:CLS:@%=&0002010A:P."FLIGHT SIMULATOR 2D":V.23;8202;0;0;0;:C=0:D=0:F=0:G=0:I=0:J=0:N=0:O=0:P=0:U=0:W=0:X=0:REP.
+1F.ZZ=1TO2:B=TI.:C=1-D*8E-5:E=-((F-2*G>29)OR(D<1)):H=(F*F+I*I)*8.1*1.225*C:J=1/(F-(F=0)):K=I*J:K=(K<=-1)-(K>-1)*K
+2K=-(K>=1)-(K<1)*K:L=K-K^3*.22:M=N*J*4.3+L+833E-5*O+.0863*P-.0873:Q=.4*M-M^3*.24:P=.16*G+.3+4.8*L+12*L*ABS(L)-L^3*46
+3P=P*E:R=P+Q:S=.0575*R*R+.025:T=(C-.05)*U*J*1100:T=-(T<=2E3)*T-(T>2E3)*2E3:V=((.28-.1*G)*P+.0308+Q*4.3)*-H:N=V*548E-7+N
+4N=-((D>.01)OR(N>0))*N:F=((T-H*S)*1E-3-W*9.81-N*I)*A+F:I=(-H*R*1E-3+X*9.81+N*F)*A+I:I=-((D>.01)OR(I<0))*I:Y=Y+A:Z=N*A+Z
+5X=1-.49*Z*Z:W=Z-Z^3*.15:_=F*X+I*W:A0=F*W-I*X:A1=_*A+A1:D=A0*A+D:D=-(D>0)*D:A2=((D>9)ORA2):N.ZZ:A$=INK.(0)
+6U=((A$=".")*(U<100)-(A$=",")*(U>0))*5+U:O=((A$="T")*(O<23)-(A$="B")*(O>-28))*.5+O:A3=(A$="N")*(A3<3)-(A$="Y")*(A3>0)+A3
+7G=.05*A3+.95*G:V.31,0,3:P."KTAS",F*1.94:P."PITCH",Z*57.3:P."ALT.",D*3.28:P."VRATE",A0*197:P.:P."ELEV.",O:P."POWER",U
+8P."FLAPS ",G*10:P.:P."STALL ",NOT-E:V.-7*(NOT-E):P.:P."DIST.",A1*1.09:P."TIME",Y,2000/(TIME-B);"%":U.(D=0)ANDA2:P.
+9IF A0>-1 THEN P."TOUCHDOWN" ELSE P."YOU CRASHED!":V.7:V.7:V.7
