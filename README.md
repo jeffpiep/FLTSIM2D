@@ -39,10 +39,13 @@ Throttle (Atari):   right arrow (increase) and left arrow (decrease)
 The display is organized in three four sections:
 
 * There are four indicators:  
-KTAS  |    True airspeed in KNOTS. One knot is about 1/2 m/s or 2 kph.  
-PITCH  |   Pitch in degrees. Positive pitch is nose up.  
-ALT.   |   Altitude in feet.   
-VRATE  |   Vertical rate with respect to the ground in feet per minute.   
+
+| Indicator | Description |
+| --- | --- |
+| KTAS  |    True airspeed in KNOTS. One knot is about 1/2 m/s or 2 kph. | 
+| PITCH  |   Pitch in degrees. Positive pitch is nose up. | 
+| ALT.   |   Altitude in feet. |   
+| VRATE  |   Vertical rate with respect to the ground in feet per minute.  |
 
 * There are three control setting readouts:  
 ELEV.     Elevator position in degrees. Increments in 0.5 degree steps.   
