@@ -29,10 +29,12 @@ Have fun!
 ## CONTROLS
 The controls are arranged after the layout in SubLogic's "Flight Simulator II." 
 
-Elevator:           B (nose up) and T (nose down) - changes in 0.5 degree steps.  
-Flaps:              N (out/down) and Y (in/up) - changes in 10 degree steps.  
-Throttle (BBC):     .> (increase) and ,< (decrease)  
-Throttle (Atari):   right arrow (increase) and left arrow (decrease)  
+Control | Keyboard Entry
+ --- | ---
+Elevator |           __B__ (nose up) and __T__ (nose down) - changes in 0.5 degree steps.  
+Flaps |              __N__ (out/down) and __Y__ (in/up) - changes in 10 degree steps.  
+Throttle (BBC) |     **.>** (increase) and **,<** (decrease) in 5% steps
+Throttle (Atari) |   right arrow (increase) and left arrow (decrease)  
 
 -------------------------------------------------------------------------------
 ## INSTRUMENT DISPLAY
@@ -48,16 +50,22 @@ The display is organized in three four sections:
 | VRATE  |   Vertical rate with respect to the ground in feet per minute.  |
 
 * There are three control setting readouts:  
-ELEV.     Elevator position in degrees. Increments in 0.5 degree steps.   
-POWER     Fraction of engine power in %. Controlled by the throttle.  
-FLAPS     Flap position in degrees. Flap position changes slowly.  
+
+Control | Description
+ --- | --- 
+ELEV.  |   Elevator position in degrees. Increments in 0.5 degree steps.   
+POWER  |   Fraction of engine power in %. Controlled by the throttle.  
+FLAPS  |   Flap position in degrees. Flap position changes slowly.  
 
 * Next is the STALL warning indicator:  
-STALL     A "!" and a BEEP mean you have dropped below the stall speed.  
+A "!" and a *BEEP* mean you have dropped below the stall speed at which point the wing loses lift. 
 
-* Finally are time and distance displays:  
-DIST.     Distance over ground traveled in yards.  
-TIME      Time elapsed in seconds and rate of game time relative to real time. The ATARI rate is correct for NTSC framerate and high for PAL.  
+* Finally are time and distance displays: 
+
+Quatity | Description
+ --- | ---
+DIST.  |   Distance over ground traveled in yards.  
+TIME   |   Time elapsed in seconds and rate of game time relative to real time. The ATARI rate is correct for NTSC framerate and high for PAL.  
 
 -------------------------------------------------------------------------------
 ## PLAYING THE GAME
